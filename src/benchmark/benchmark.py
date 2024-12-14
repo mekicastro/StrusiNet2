@@ -763,7 +763,7 @@ if __name__ == "__main__":
                         help='Path to the model script. Default: "./strusinet.py".')
 
     parser.add_argument('--benchmark-metadata', dest='benchmark_metadata_path', type=str,
-                        default='benchmarking_datasets.json',
+                        default='benchmark_datasets.json',
                         help="Name of the JSON file containing benchmark dataset information (in --datasets-dir). Default: 'benchmarking_datasets.json'")
 
     parser.add_argument('--datasets-dir', dest='datasets_dir', type=str,
