@@ -198,8 +198,8 @@ if __name__ == "__main__":
             "Invalid value for --header. Please use 'True' or 'False'.")
     args.header = args.header.lower() == 'true'
 
-    if args.output_path:
-        output_path = args.output_path
+    if args.output:
+        output_path = args.output
     elif args.output_name:
         output_path = f"output/{args.output_name}/{args.output_name}_embeddings.tsv"
     else:
