@@ -164,7 +164,7 @@ if __name__ == "__main__":
                         help='Path to the input CSV/TSV file containing RNA secondary structures.')
     parser.add_argument('--samples', type=int)
     
-    parser.add_argument('--output_path', type=str, help='Output path of the embedding')
+    parser.add_argument('--output', type=str, help='Output path of the embedding')
     parser.add_argument('--output_name', type=str, help='If output path not defined, store in output/{output_name}/{output_name}_embedding.tsv')
     
     parser.add_argument('--structure_column_name', type=str,
