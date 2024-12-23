@@ -47,7 +47,7 @@ def load_trained_model(model_path, model_type="siamese", graph_encoding="allocat
         model = GINModel3Layers(hidden_dim=256, output_dim=128)
     
     elif model_type == "gin":
-        model = GINModelGeneral(hidden_dim=256, output_dim=128, gin_layers = gin_layers)
+        model = GINModelGeneral(hidden_dim=256, output_dim=128, graph_encoding=graph_encoding, gin_layers = gin_layers)
 
     # Load the checkpoint that contains multiple states (epoch, optimizer, and model state_dict)
     checkpoint = torch.load(model_path, map_location=device, weights_only=True)
