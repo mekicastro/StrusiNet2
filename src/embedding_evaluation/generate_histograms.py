@@ -97,7 +97,7 @@ if __name__ == "__main__":
         val_dataset = TripletRNADataset(val_df, max_len=max_len)
         val_loader = TorchDataLoader(val_dataset, batch_size=4, shuffle=False, pin_memory=True)
     else:
-        val_dataset = GINRNADataset(val_df)
+        val_dataset = GINRNADataset(val_df, graph_encoding=args.graph_encoding)
         val_loader = GeoDataLoader(val_dataset, batch_size=16, shuffle=False, pin_memory=True)
     
     model = load_trained_model(args.model_path, args.model_type, gin_layers=args.gin_layers, graph_encoding=args.graph_encoding)
